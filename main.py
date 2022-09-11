@@ -49,8 +49,8 @@ def chat(chanel_list,authorization_list):
 
 
 if __name__ == "__main__":
-    chanel_list = ["902180067130630174"]
-    authorization_list = ["ODYwNDkwMTc3NTk5MjQyMjYw.GLbRbJ.SjQD9aI_PF_YO1DNK_f035nPwNscwujkxPvM00"]
+    chanel_list = ["channel_id"]
+    authorization_list = ["user_Owen_Authorization"]
     while True:
         try:
             chat(chanel_list,authorization_list)
