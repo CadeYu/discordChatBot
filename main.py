@@ -5,24 +5,14 @@ import random
 import time
 
 
-def get_context():
-    context_list = [
-        "好羡慕",
-        "马上10级",
-        "感觉全是机器人",
-        "水",
-        "冲",
-        "肝",
-        "干就完了兄弟们",
-        "好累",
-         "gogogo",
-        "\U0001F607",
-        "\U0001F642",
-       "\U0001F601"
-        
-    ]
-    text = random.choice(context_list)
-    return text
+
+def get_api():
+    response_api = requests.get("https://api.vvhan.com/api/joke")
+    msg = response_api.text
+    return msg
+
+
+
 
 
 def chat(chanel_list,authorization_list):
@@ -34,7 +24,7 @@ def chat(chanel_list,authorization_list):
         }
         for chanel_id in chanel_list:
             msg = {
-                "content": get_context(),
+                "content": get_api(),
                 "nonce": "82329451214{}33232234".format(random.randrange(0, 1000)),
                 "tts": False,
             }
@@ -48,13 +38,14 @@ def chat(chanel_list,authorization_list):
         time.sleep(random.randrange(1, 3))
 
 
+
 if __name__ == "__main__":
-    chanel_list = ["channel_id"]
-    authorization_list = ["user_Owen_Authorization"]
+    chanel_list = ["902180067130630174"]
+    authorization_list = ["ODYwNDkwMTc3NTk5MjQyMjYw.G5fE2D.i6VluWny2Ks3pdWNqDwZ4FQdfhCUhtYE_GURoA"]
     while True:
         try:
             chat(chanel_list,authorization_list)
-            sleeptime = random.randrange(40, 50)
+            sleeptime = random.randrange(59, 60)
             time.sleep(sleeptime)
         except:
             break
