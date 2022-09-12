@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*
+from ast import If
 import requests
 import json
 import random
@@ -7,8 +8,21 @@ import time
 
 
 def get_api():
-    response_api = requests.get("https://api.vvhan.com/api/joke")
-    msg = response_api.text
+    response_api_joke = requests.get("https://api.vvhan.com/api/joke")
+    msg_joke = response_api_joke.text
+    response_api_poem = requests.get("https://v1.jinrishici.com/all")
+    msg_pome = response_api_poem.text
+    parse_json = json.loads(msg_pome)
+    final_data_poem = parse_json["content"]
+    msg = ""
+
+    flag = random.randint(0,1);
+    if flag == 0:
+        msg = final_data_poem
+    else :
+        msg = msg_joke
+
+
     return msg
 
 
@@ -40,8 +54,8 @@ def chat(chanel_list,authorization_list):
 
 
 if __name__ == "__main__":
-    chanel_list = ["channel_id"]
-    authorization_list = ["user_Owen_Authorization"]
+    chanel_list = ["902180067130630174"]
+    authorization_list = ["ODYwNDkwMTc3NTk5MjQyMjYw.GHV0xT.VXgD2PskL2QIHVqTUkeK7qk6-6B5a_5FZf4mu8"]
     while True:
         try:
             chat(chanel_list,authorization_list)
