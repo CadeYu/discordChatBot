@@ -25,6 +25,14 @@ def get_api():
 
     return msg
 
+def random_context():
+    random_list = [
+        "大家好啊",
+        "这个项目好像融资了不少",
+        "lfg",
+        "想要升级",
+        "马上升级"
+    ]
 
 
 
@@ -54,8 +62,8 @@ def chat(chanel_list,authorization_list):
 
 
 if __name__ == "__main__":
-    chanel_list = ["902180067130630174"]
-    authorization_list = ["ODYwNDkwMTc3NTk5MjQyMjYw.GHV0xT.VXgD2PskL2QIHVqTUkeK7qk6-6B5a_5FZf4mu8"]
+    chanel_list = ["channel_id"]
+    authorization_list = ["user_Owen_Authorization"]
     while True:
         try:
             chat(chanel_list,authorization_list)
