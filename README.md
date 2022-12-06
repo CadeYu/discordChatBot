@@ -1,4 +1,5 @@
 # python简易discord聊天机器人
+此脚本自动获取第三方的api向指定的discord频道发送新闻
 
 ## 安装第三方库 requests
 > pip install requests
@@ -17,14 +18,27 @@
 
 ![user_Owen_Authorization](WX20220911-222511@2x.png)
 
-Authorization : 有用户的用户名等重要信息，同样打开发者工具,切换到网络->Fetch/XMR 画线部分就是用户个人Authorization的
+Authorization : 有用户的用户名等重要信息，同样打开发者工具,切换到网络/Fetch/XMR 画线部分就是用户个人Authorization的
 
 
 
 ****************************************************************
+## 注册第三方api
 
+[newsdata](https://newsdata.io/)
+
+拿到api后，替换
+
+![api](iShot_2022-12-06_14.37.30.png)
+
+
+
+
+****************************************************************
 ## 运行脚本
 > python main.py
 >
-![Results](WX20220911-224056@2x.png)
-![log](WX20220911-224117@2x.png)
+
+
+![run_script](image/iShot_2022-12-06_14.41.29.png)
+![run_script](image/WX20221206-144047@2x.png)
