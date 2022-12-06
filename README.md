@@ -29,7 +29,7 @@ Authorization : 有用户的用户名等重要信息，同样打开发者工具,
 
 拿到api后，替换
 
-![api](iShot_2022-12-06_14.37.30.png)
+![api](image/iShot_2022-12-06_14.37.30.png)
 
 
 
